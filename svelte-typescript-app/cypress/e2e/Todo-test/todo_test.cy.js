@@ -1,53 +1,53 @@
-import todo_page from "../../pages/todo_page"
+import todo_page from "../../pages-objects/todo_page"
 
 describe('it should be able to add a new todo to the list',()=>{
     
     before(function(){
-        cy.visit('http://localhost:3001/')
+        cy.visit('/')
     })
 
 
     it('Create New todo', function(){
-        todo_page.case2()
+        todo_page.createNewtodo()
     })
 
-    it('Delete existing todo', function(){
-        todo_page.case3()
+    it('DeleteExistingTodo', function(){
+        todo_page.deleteExistingTodo()
     })
 
-    it('Update exisiting todo', function(){
-        todo_page.case4()
+    it('UpdateExisitingTodo', function(){
+        todo_page.updateExisitingTodo()
     })
 
-    it('Get exisiting todo', function(){
-        todo_page.case5()
+    it('GetExisitingTodo', function(){
+        todo_page.getExisitingTodo()
     })
 
-    it('Get Un-exisiting todo', function(){
-        todo_page.case6()
+    it('GetUn-exisitingTodo', function(){
+        todo_page.getUnExisitingTodo()
     })
 
     it('Create New todo without entered Task', function(){
-        todo_page.case7()
+        todo_page.createNewTodoWithoutEnteredTask()
     })
 
-    it('Delete Un-existing todo', function(){
-        todo_page.case8()
+    it('DeleteUnExistingTodo', function(){
+        todo_page.deleteUnExistingTodo()
     })
 
-    it('Update Un-existing todo', function(){
-        todo_page.case9()
+    it('UpdateUnExistingTodo', function(){
+        todo_page.updateUnExistingTodo()
     })
-    it('Create New todo with char id', function(){
-        todo_page.case10()
+    it('CreateNewTodoWithCharId', function(){
+        todo_page.createNewTodoWithCharId()
     })
      
-    it('Create New todo with exisiting id', function(){
-        todo_page.case11()
+    it('CreateNewTodoWithExisitingId', function(){
+        todo_page.createNewTodoWithExisitingId()
     })
     
     it('convert the checkbox to true then display the todo', function(){
-        todo_page.case12()
+        todo_page.checkboxMark()
     })
     after(function(){
         cy.log('Done')

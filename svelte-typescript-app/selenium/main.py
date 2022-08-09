@@ -1,6 +1,5 @@
 import unittest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 import todo_page
@@ -21,38 +20,38 @@ class todoPage(unittest.TestCase):
         print(self.driver.title)
         assert todo_title.is_title_matching()
 
-    def test_case1(self):
-        todo_page.todo(self.driver).CreateNewTodo()
+    def testCreateNewTodo(self):
+        todo_page.todo(self.driver).createNewTodo()
 
-    def test_case2(self):
-        todo_page.todo(self.driver).DeleteExistingTodo()  
+    def testDeleteExistingTodo(self):
+        todo_page.todo(self.driver).deleteExistingTodo()  
     
-    def test_case3(self):
-        todo_page.todo(self.driver).UpadateTodo() 
+    def testUpadateTodo(self):
+        todo_page.todo(self.driver).upadateTodo() 
 
-    def test_case4(self):
-        todo_page.todo(self.driver).GetbyID() 
+    def testGetbyID(self):
+        todo_page.todo(self.driver).getbyID() 
     
-    def test_case5(self):
-        todo_page.todo(self.driver).GetUnExisting() 
+    def testGetUnExisting(self):
+        todo_page.todo(self.driver).getUnExisting() 
 
-    def test_case6(self):
-        todo_page.todo(self.driver).CreateNewTodoWithouttask() 
+    def testCreateNewTodoWithouttask(self):
+        todo_page.todo(self.driver).createNewTodoWithouttask() 
     
-    def test_case7(self):
-        todo_page.todo(self.driver).DeleteUnExisting() 
+    def testDeleteUnExisting(self):
+        todo_page.todo(self.driver).deleteUnExisting() 
 
-    def test_case8(self):
-        todo_page.todo(self.driver).UpadateUnExistingTodo() 
+    def testUpadateUnExistingTodo(self):
+        todo_page.todo(self.driver).upadateUnExistingTodo() 
     
-    def test_case9(self):
-        todo_page.todo(self.driver).CreatewithChar() 
+    def testCreatewithChar(self):
+        todo_page.todo(self.driver).createwithChar() 
 
-    def test_case10(self):
-        todo_page.todo(self.driver).CreateWithExistingID() 
+    def testCreateWithExistingID(self):
+        todo_page.todo(self.driver).createWithExistingID() 
     
-    def test_case11(self):
-        todo_page.todo(self.driver).ConvertCheckBox() 
+    def testConvertCheckBox(self):
+        todo_page.todo(self.driver).convertCheckBox() 
 
 
     def tearDown(self):
