@@ -17,73 +17,74 @@ class todo(BasePage):
     def createNewTodo(self):
          wait = WebDriverWait(self.driver, 60)
          wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('10')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.TaskTextField))).send_keys('ten')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.CreateButton))).click()
+
+         self.driver.find_element(By.XPATH, todoPage.TaskTextField).send_keys('ten')
+         self.driver.find_element(By.XPATH, todoPage.CreateButton).click()
     
     
     #case3
     def deleteExistingTodo(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.DeleteMark))).click()
+         self.driver.find_element(By.XPATH, todoPage.DeleteMark).click()
     
     
     #case4
     def upadateTodo(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('1')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.TaskTextField))).send_keys('DoaaSaber')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.UpdateButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('1')
+         self.driver.find_element(By.XPATH, todoPage.TaskTextField).send_keys('DoaaSaber')
+         self.driver.find_element(By.XPATH, todoPage.UpdateButton).click()
     
     #case5
     def getbyID(self):
         wait = WebDriverWait(self.driver, 60)
-        wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('1')
-        wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.GetButton))).click()
+        self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('1')
+        self.driver.find_element(By.XPATH, todoPage.GetButton).click()
     
     #case6
     def getUnExisting(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('16')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.GetButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('16')
+         self.driver.find_element(By.XPATH, todoPage.GetButton).click()
     
     
     #case7
     def createNewTodoWithouttask(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('56')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.CreateButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('56')
+         self.driver.find_element(By.XPATH, todoPage.CreateButton).click()
     
     
     #case8
     def deleteUnExisting(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('98')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.DeleteButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('98')
+         self.driver.find_element(By.XPATH, todoPage.DeleteButton).click()
     
 
      #case9
     def upadateUnExistingTodo(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('115')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.TaskTextField))).send_keys('DoaaSaber')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.UpdateButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('115')
+         self.driver.find_element(By.XPATH, todoPage.TaskTextField).send_keys('DoaaSaber')
+         self.driver.find_element(By.XPATH, todoPage.UpdateButton).click()
     
      #case10
     def createwithChar(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('hello')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.TaskTextField))).send_keys('world')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.CreateButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('hello')
+         self.driver.find_element(By.XPATH, todoPage.TaskTextField).send_keys('world')
+         self.driver.find_element(By.XPATH, todoPage.CreateButton).click()
     
      #case11
     def createWithExistingID(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.IdTextField))).send_keys('1')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.TaskTextField))).send_keys('Amira')
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.CreateButton))).click()
+         self.driver.find_element(By.XPATH, todoPage.IdTextField).send_keys('1')
+         self.driver.find_element(By.XPATH, todoPage.TaskTextField).send_keys('Amira')
+         self.driver.find_element(By.XPATH, todoPage.CreateButton).click()
     
      #case12
     def convertCheckBox(self):
          wait = WebDriverWait(self.driver, 60)
-         wait.until(EC.visibility_of_element_located((By.XPATH, todoPage.CheckMark))).click()
+         self.driver.find_element(By.XPATH, todoPage.CheckMark).click()
     
