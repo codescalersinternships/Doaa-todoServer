@@ -31,31 +31,36 @@ class todo{
 
 
 
+    //create new todo , by entering the new id , its task and click on create button
     createNewtodo(){
-        //case2
+
         this.getTitle().contains("TODO APP")
         this.getIdInput().type("166")
         this.getTaskInput().type("eaten")
         this.getSubmitButton().click()
     }
-    //case3
+    //delete todo , by entering the id and click on delete button
+
     deleteExistingTodo(){
         this.getDeleteMark().click()
     }
 
-    //case4
+    //update  todo , by entering the id and its task and click on update button
+
     updateExisitingTodo(){
          this.getIdInput().type("1")
          this.getTaskInput().type("DoaaSaber")
          this.getUpdateButton().click()
         }
         
-        //case5
+        //get todo , by entering the id and click on get button
+
     getExisitingTodo(){
         this.getIdInput().type("1")
         this.getButton().click()}
 
-        //case6 
+   //get todo , by entering un-existing id and click on get button
+ 
     getUnExisitingTodo(){
     this.getIdInput().clear({force: true})
     this.getIdInput().type("15")
@@ -64,39 +69,45 @@ class todo{
     }
 
 
-    //case7
+    //create new todo , by entering the new id and click on create button
+
     createNewTodoWithoutEnteredTask(){
     this.getIdInput().type("9")
     this.getSubmitButton().click()}
 
-    //case8
+    //delete todo , by entering un-existing id and click on delete button
+
     deleteUnExistingTodo(){
     this.getIdInput().type("36")
     this.getDeleteButton().click()
     }
 
-    //case9
+    //update  todo , by entering un-existing id and its task and click on update button
+
     updateUnExistingTodo(){
         this.getIdInput().type("88")
         this.getTaskInput().type("DoaaSaber")
         this.getUpdateButton().click()
     }
 
-    //case10
+    //create new todo , by entering the new id(begain with character) , its task and click on create button
+
     createNewTodoWithCharId(){
         this.getIdInput().type("BB")
         this.getTaskInput().type("jj")
         this.getSubmitButton().click()
     }
 
-    //case11
+    //create new todo , by entering the existing id ,its task and click on create button
+
     createNewTodoWithExisitingId(){
         this.getIdInput().type("1")
         this.getTaskInput().type("amira")
         this.getSubmitButton().click()
     }
 
-    //case12
+    //click on the checkbox to toggle the "done" 
+
     checkboxMark(){
         this.getcheckMark().click()
         this.getIdInput().type(" ")
